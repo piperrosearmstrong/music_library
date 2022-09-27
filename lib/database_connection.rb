@@ -1,8 +1,8 @@
 require 'pg'
 
 class DatabaseConnection
-  def self.connect(database_name)
-    @connection = PG.connect({ host: '127.0.0.1', dbname: database_name })
+  def self.connect(artists)
+    @connection = PG.connect({ host: '127.0.0.1', dbname: artists })
   end
 
   def self.exec_params(query, params)
