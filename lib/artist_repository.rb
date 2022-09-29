@@ -1,15 +1,9 @@
-require 'artist'
+require_relative "./artist"
 
 class ArtistRepository
 
-    # Selecting all records
-    # No arguments
     def all
       artists = []
-      # Executes the SQL query:
-      # SELECT id, name, genre FROM artists;
-  
-      # Returns an array of Artist objects.
 
       sql = 'SELECT id, name, genre FROM artists;'
       result_set = DatabaseConnection.exec_params(sql, [])
